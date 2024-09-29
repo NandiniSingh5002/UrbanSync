@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .form-container h2:hover {
+            color: #e3fcaa;
+        }
+        .form-control {
+            border-radius: 8px;
+            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-control:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.6);
+        }
+        .btn-custom {
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .btn-secondary {
+            background-color: #5c5c5c;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #3e3e3e;
+        }
+        .container{
+            margin-top: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-8 mx-auto">
+            <div class="form-container">
+                <h2 class="text-center">Add New Project</h2>
+                <form id="projectForm">
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="projectName">Project Name</label>
+                            <input type="text" class="form-control" id="projectName" placeholder="Enter project name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="department">Department</label>
+                            <input type="text" class="form-control" id="department" placeholder="Enter department" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Enter location" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="budget">Budget</label>
+                            <input type="number" class="form-control" id="budget" placeholder="Enter budget" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" class="form-control" id="startDate" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="endDate">End Date</label>
+                            <input type="date" class="form-control" id="endDate" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="stakeholders">Stakeholders</label>
+                        <input type="text" class="form-control" id="stakeholders" placeholder="Enter stakeholders" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="objectives">Project Objectives</label>
+                        <textarea class="form-control" id="objectives" rows="3" placeholder="Enter project objectives" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="outcomes">Expected Outcomes</label>
+                        <textarea class="form-control" id="outcomes" rows="3" placeholder="Enter expected outcomes" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="documentation">Project Documentation Upload</label>
+                        <input type="file" class="form-control-file" id="documentation">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary btn-custom" id="saveDraft">Save as Draft</button>
+                        <button type="submit" class="btn btn-primary btn-custom">Submit for Approval</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/addnew.js"></script>
+</body>
+</html>

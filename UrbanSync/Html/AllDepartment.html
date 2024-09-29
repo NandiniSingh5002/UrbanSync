@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Government Departments</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .department-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 15px;
+        }
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            background-color: #e9ecef;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .card-text {
+            color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mx-auto">
+        <h2 class="text-center text-2xl font-bold mb-10">Indian Government Ministries At Cities Level</h2>
+        <div class="row">
+            <!-- Ministry cards -->
+
+            <!-- Ministry 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('health')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Health and Family Welfare</h5>
+                        <p class="card-text">Projects related to healthcare, hospitals, and medical infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('education')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Education</h5>
+                        <p class="card-text">Projects on education reform, school development, and literacy programs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('defence')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Defence</h5>
+                        <p class="card-text">Projects on national defense, military infrastructure, and technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('agriculture')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Agriculture and Farmers' Welfare</h5>
+                        <p class="card-text">Projects on agricultural development, farmer welfare, and rural schemes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('transport')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Road Transport and Highways</h5>
+                        <p class="card-text">Projects on highways, roads, and national transportation infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('railways')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Railways</h5>
+                        <p class="card-text">Projects on Indian railways, station modernization, and new rail routes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('finance')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Finance</h5>
+                        <p class="card-text">Projects on the financial sector, banking reforms, and digital payments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('power')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Power</h5>
+                        <p class="card-text">Projects on electricity generation, distribution, and renewable energy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('home_affairs')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Home Affairs</h5>
+                        <p class="card-text">Projects on internal security, police reform, and disaster management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('environment')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Environment, Forest and Climate Change</h5>
+                        <p class="card-text">Projects on environmental conservation, climate change, and biodiversity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 11 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('commerce')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Commerce and Industry</h5>
+                        <p class="card-text">Projects on industrial development, trade, and export promotion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry 12 -->
+            <div class="col-md-4 mb-4">
+                <div class="card department-card p-4 bg-white shadow-lg" onclick="goToProjectsPage('information_technology')">
+                    <div class="card-body">
+                        <h5 class="card-title">Ministry of Electronics and Information Technology</h5>
+                        <p class="card-text">Projects on digital infrastructure, cybersecurity, and e-governance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Function to navigate to the department's projects page
+        function goToProjectsPage(department) {
+            window.location.href = `project.html?department=${department}`;
+        }
+    </script>
+
+</body>
+</html>

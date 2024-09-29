@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Projects</title>
+    
+    <!-- Bootstrap and Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f4f8;
+            padding: 20px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover animation */
+        .list-group-item {
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .list-group-item:hover {
+            background-color: #f0f4f8;
+            transform: scale(1.03);
+        }
+
+        .hidden-section {
+            display: none;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section titles */
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 15px;
+        }
+
+        /* Scroll to top button */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+        #scrollTopBtn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll to top button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+    <div class="container">
+        <h2 id="departmentName" class="text-center text-3xl font-semibold my-5"></h2>
+        
+        <div id="historicalSection" class="project-section hidden-section">
+            <h3 class="section-title">Historical Projects</h3>
+            <ul id="historicalProjects" class="list-group"></ul>
+        </div>
+        
+        <div id="presentSection" class="project-section hidden-section">
+            <h3 class="section-title">Ongoing Projects</h3>
+            <ul id="presentProjects" class="list-group"></ul>
+        </div>
+
+        <div id="futureSection" class="project-section hidden-section">
+            <h3 class="section-title">Future Projects</h3>
+            <ul id="futureProjects" class="list-group"></ul>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle interactivity -->
+    <script>
+        // Smoothly scroll to top
+        function scrollToTop() {
+            $('html, body').animate({scrollTop: 0}, '300');
+        }
+
+        // Get the department name from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const department = urlParams.get('department');
+
+        // Dummy project data for 12 ministries
+        const projectsData = {
+            'health': {
+                name: 'Ministry of Health and Family Welfare',
+                historical: ['National Polio Eradication Program', 'National AIDS Control Program'],
+                present: ['Ayushman Bharat', 'COVID-19 Vaccination Campaign'],
+                future: ['Digital Health Mission', 'Universal Health Coverage']
+            },
+            'education': {
+                name: 'Ministry of Education',
+                historical: ['Midday Meal Scheme', 'Sarva Shiksha Abhiyan'],
+                present: ['National Education Policy 2020 Implementation', 'Samagra Shiksha'],
+                future: ['Digital Learning Program', 'Skill Development Mission']
+            },
+            'defence': {
+                name: 'Ministry of Defence',
+                historical: ['INS Vikrant Commissioning', 'Agni Missile Program'],
+                present: ['Rafale Aircraft Deployment', 'Indian Army Modernization'],
+                future: ['Space Defence Program', 'Futuristic Soldier Program']
+            },
+            'agriculture': {
+                name: 'Ministry of Agriculture and Farmers\' Welfare',
+                historical: ['Green Revolution', 'PM Kisan Samman Nidhi'],
+                present: ['Pradhan Mantri Fasal Bima Yojana', 'Kisan Credit Card Scheme'],
+                future: ['AgriTech Development Mission', 'Irrigation Infrastructure Expansion']
+            },
+            'transport': {
+                name: 'Ministry of Road Transport and Highways',
+                historical: ['Golden Quadrilateral Project', 'National Highway Development'],
+                present: ['Bharatmala Pariyojana', 'Road Safety Programs'],
+                future: ['Electric Highways', 'Smart City Road Connectivity']
+            },
+            'railways': {
+                name: 'Ministry of Railways',
+                historical: ['Konkan Railway Project', 'Gauge Conversion Scheme'],
+                present: ['Bullet Train Project', 'Station Modernization'],
+                future: ['Hyperloop India', 'Green Energy Railways Initiative']
+            },
+            'finance': {
+                name: 'Ministry of Finance',
+                historical: ['GST Rollout', 'Demonetization'],
+                present: ['Digital Payments Push', 'Privatization of Public Sector Banks'],
+                future: ['Digital Currency Implementation', 'Banking 4.0 Reform']
+            },
+            'power': {
+                name: 'Ministry of Power',
+                historical: ['Rural Electrification Program', 'National Power Grid'],
+                present: ['Saubhagya Scheme', 'Green Energy Corridors'],
+                future: ['Solar Energy Expansion', 'Smart Grid Implementation']
+            },
+            'home_affairs': {
+                name: 'Ministry of Home Affairs',
+                historical: ['Disaster Management Act 2005', 'National Security Guard (NSG) Expansion'],
+                present: ['Police Modernization Program', 'Disaster Response and Relief Programs'],
+                future: ['AI-based Internal Security Surveillance', 'Smart City Policing']
+            },
+            'environment': {
+                name: 'Ministry of Environment, Forest and Climate Change',
+                historical: ['Project Tiger', 'National Green Tribunal Establishment'],
+                present: ['Clean Air Campaign', 'National Action Plan on Climate Change'],
+                future: ['Sustainable Forest Management', 'Renewable Energy Adoption Programs']
+            },
+            'commerce': {
+                name: 'Ministry of Commerce and Industry',
+                historical: ['Make in India', 'Special Economic Zones (SEZs)'],
+                present: ['Start-up India', 'FDI Growth Promotion'],
+                future: ['Trade Promotion via Digital Platforms', 'New Industrial Corridors']
+            },
+            'information_technology': {
+                name: 'Ministry of Electronics and Information Technology',
+                historical: ['Digital India Campaign', 'Aadhaar Program'],
+                present: ['Cybersecurity Initiatives', 'E-Governance Projects'],
+                future: ['AI and Machine Learning Integration', 'Blockchain for Governance']
+            }
+        };
+
+        // Populate the page with projects for the selected department
+        const departmentData = projectsData[department];
+        if (departmentData) {
+            // Set the department name
+            $('#departmentName').text(departmentData.name);
+
+            // Function to add projects to the list
+            function addProjects(projects, listId) {
+                projects.forEach(project => {
+                    const listItem = $('<li>').addClass('list-group-item').text(project);
+                    $(`#${listId}`).append(listItem);
+                });
+            }
+
+            // Populate historical projects
+            addProjects(departmentData.historical, 'historicalProjects');
+            $('#historicalSection').slideDown(); // Show section with animation
+
+            // Populate ongoing (present) projects
+            addProjects(departmentData.present, 'presentProjects');
+            $('#presentSection').fadeIn(); // Show section with fade effect
+
+            // Populate future projects
+            addProjects(departmentData.future, 'futureProjects');
+            $('#futureSection').slideDown(); // Show section with animation
+        } else {
+            $('#departmentName').text('Department not found');
+        }
+
+        // Show scroll to top button on scroll
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('#scrollTopBtn').fadeIn();
+            } else {
+                $('#scrollTopBtn').fadeOut();
+            }
+        });
+    </script>
+
+</body>
+</html>

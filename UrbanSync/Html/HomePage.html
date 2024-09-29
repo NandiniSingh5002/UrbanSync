@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanSync - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <img src="../city-svgrepo-com.svg" alt="" height="50" width="50">
+        <div class="logo" >UrbanSync</div>
+        <div class="auth-buttons">
+            <a href="./login.html" class="btn btn-light">Login</a>
+            <a href="./RegistrationPage.html" class="btn btn-light">Register</a>
+        </div>
+    </header>
+
+    <!-- Navigation Sidebar -->
+    <nav class="navbar navbar-expand-lg fade-in">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="nav-item nav-link active" href="./AllDepartment.html"><i class="fas fa-tachometer-alt"></i>All Project</a>
+            <a class="nav-item nav-link" href="./SlotBooking.html"><i class="fas fa-calendar-alt"></i> Project Slot Booking</a>
+            <a class="nav-item nav-link" href="./ProjectTracking.html"><i class="fas fa-tasks"></i> Project Tracking</a>
+            <a class="nav-item nav-link" href="./SearchProject.html"><i class="fas fa-search"></i> Project Search</a>
+            <a class="nav-item nav-link" href="./VirtualMeetingScreen.html"><i class="fas fa-video"></i> Virtual Meetings</a>
+            <a class="nav-item nav-link" href="./ChatBox.html"><i class="fas fa-comments"></i> Chatbox</a>
+            <a class="nav-item nav-link" href="./About3.html"><i class="fas fa-user"></i> About Us</a>
+        </div>
+    </nav>
+    <!-- intro -->
+    <div class="intro-section">
+        <div class="overlay"></div>
+        <div class="intro-content animate__animated animate__fadeIn">
+            <h1>Welcome to UrbanSync</h1>
+            <p>Your Gateway to Enhanced Inter-Departmental Cooperation</p>
+            <a href="#maincontent" class="btn explore-btn animate__animated animate__bounce">Explore Now</a>
+            <!-- <a href=".main-content" class="btn explore-btn animate__animated animate__bounce">Explore Now</a> -->
+        </div>
+    </div>
+    <!-- Main Content Area -->
+    <!-- <div id="main-content" class="main-content fade-in"> -->
+    <div class="main-content fade-in" id="maincontent">
+        <!-- <div class="welcome-message">Welcome to UrbanSync</div> -->
+        <p class="lead">UrbanSync is a platform designed to enhance inter-departmental cooperation in Indian cities.
+            Here's a quick overview of what you can do:</p>
+
+        <div class="feature-overview">
+            <div class="feature-card" data-toggle="tooltip" data-placement="top" title="Book project slots with ease">
+                <img src="../appoitment2.jpg" alt="Project Slot Booking" style="margin-left: 50px;">
+                <h3>Project Slot Booking</h3>
+                <p>Reserve time slots for your projects with ease. Manage bookings and keep track of project schedules</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#bookingModal">Learn More</button>
+            </div>
+            <div class="feature-card" data-toggle="tooltip" data-placement="top" title="Track your projects' progress">
+                <img src="../target.png" alt="Project Tracking">
+                <h3>Project Tracking </h3>
+                <p>Monitor the progress of ongoing projects. Keep tabs on milestones, deadlines, and overall project
+                    health.</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#trackingModal">Learn More</button>
+            </div>
+            <div class="feature-card" data-toggle="tooltip" data-placement="top"
+                title="Stay updated with recent activities">
+                <img src="../activity.jpg" alt="Recent Activities" >
+                <h3>Recent Activities </h3>
+                <p>Stay updated with the latest activities and notifications related to your projects and departments.
+                </p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#activitiesModal">Learn More</button>
+            </div>
+            <div class="feature-card" data-toggle="tooltip" data-placement="top" title="Access key metrics quickly">
+                <img src="../search2.jpg" alt="Dashboard Overview">
+                <h3>Dashboard Overview</h3>
+                <p>Access key metrics and notifications. Customize your dashboard to view the most important
+                    data first.</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#dashboardModal">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- News/Updates Section -->
+    <div class="news-ticker fade-in">
+        <h4>Latest News/Updates</h4>
+        <div class="ticker">
+            <marquee behavior="scroll" direction="left">
+                <span>Update 1: UrbanSync launches new features! | Update 2: Join our upcoming webinar! | Update 3:
+                    New partnership announced!</span>
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <!-- Testimonials Section -->
+    <div class="testimonials fade-in">
+        <h4>Testimonials</h4>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="../user.jfif" alt="User A" class="testimonial-image">
+                <div class="testimonial-content">
+                    <h5>User A</h5>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"UrbanSync has revolutionized our project management! The features are intuitive and easy to
+                        use."</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <img src="../user2.jpg" alt="User B" class="testimonial-image">
+                <div class="testimonial-content">
+                    <h5>User B</h5>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The platform is user-friendly and efficient! It has significantly improved our team's
+                        communication."</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <img src="../user.jfif" alt="User C" class="testimonial-image">
+                <div class="testimonial-content">
+                    <h5>User C</h5>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I love the real-time updates and how easy it is to track project progress!"</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <img src="../user2.jpg" alt="User D" class="testimonial-image">
+                <div class="testimonial-content">
+                    <h5>User D</h5>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"A fantastic tool for managing our projects! Highly recommend it."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- loction Information Section -->
+    <!-- Location Information Section -->
+    <div class="location-info fade-in">
+        <div id="detail-location">
+            <h4>Our Location</h4>
+            <p>We will be glad if you come...</p>
+            <p><strong>Address:</strong> Gola Ka Mandir, Gwalior, Madhya Pradesh, India</p>
+            <p><strong>Phone:</strong> 1 222 333 444</p>
+            <p><strong>Email:</strong> <a href="mailto:Urbansync@gmail.com">Urbansync@gmail.com</a></p>
+        </div>
+        
+
+        <div class="map-container">
+            <a href="https://www.google.com/maps/place/Gola+Ka+Mandir,+Gwalior,+Madhya+Pradesh,+India" target="_blank">
+                <img src="../gole.png" alt="Google Map"
+                    class="map-image">
+            </a>
+            <!-- <img src="../Screenshot (182).png" alt="Google Map" class="map-image" href="https://www.google.com/maps/place/Gola+Ka+Mandir,+Gwalior,+Madhya+Pradesh,+India"> -->
+            <p>Click on the image for directions:</p>
+            <a href="https://www.google.com/maps/place/Gola+Ka+Mandir,+Gwalior,+Madhya+Pradesh,+India" target="_blank">
+                <button class="btn btn-secondary">View on Google Maps</button>
+            </a>
+        </div>
+    </div>
+    <!-- Contact Us and Newsletter Section -->
+    <!-- Interactive Contact Section -->
+    <div class="contact-newsletter-container fade-in">
+        <div class="row">
+            <!-- Contact Us Section -->
+            <div class="col-md-6" style="padding: 2%;">
+                <h4>Contact Us</h4>
+                <button class="btn btn-secondary" id="toggleContactForm">Get in Touch</button>
+                <div class="contact-form" id="contactForm">
+                    <h5>Contact Form</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="col-md-6" style="padding: 2%;">
+                <!-- <h4>Newsletter</h4> -->
+                <p>Enter Your Email Here</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p>Stay Connected</p>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h3 class="footer_link_section_title">Global Sites</h3>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank">India</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Singapore</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank">Malaysia</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank">Indonesia </a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank">Peru</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Colombia</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> User
+                            agreement</a><br>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <h3 class="footer_link_section_title">Info</h3>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> T&C</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Privacy policy
+                        </a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> FAQ</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Blog </a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Agent
+                            registration</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> Insurance
+                            partner</a><br>
+                        <a class=" footer_link_new" href="../bootstrap.html" target="_blank"> User agreement</a><br>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <a href="#">Contact Us</a>
+        <a href="#">About</a>
+        <a href="#">Privacy Policy</a>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Project Slot Booking Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Project Slot Booking feature allows you to book slots easily, view availability, and
+                        manage
+                        your reservations effectively.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trackingModalLabel">Project Tracking Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Track your projects with real-time updates on milestones, deadlines, and overall progress.
+                        Ensure
+                        everything stays on schedule.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="activitiesModal" tabindex="-1" aria-labelledby="activitiesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="activitiesModalLabel">Recent Activities Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Keep an eye on recent activities across projects. Get notified about updates, changes, and
+                        important alerts instantly. Stay informed and proactive!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dashboardModalLabel">Dashboard Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Your customizable dashboard gives you quick access to metrics, notifications, and project
+                        statuses at a glance. Personalize it to suit your workflow!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/homepage.js"> </script>
+</body>
+
+</html>

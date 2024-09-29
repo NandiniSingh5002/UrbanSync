@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Meetings</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .meeting-card {
+            margin-top: 30px;
+        }
+
+        .card-header {
+            background: linear-gradient(200deg, #007bff, #6a11cb);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #007bff;
+        }
+
+        .meeting-form {
+            display: none;
+        }
+
+        .meeting-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card meeting-card">
+            <div class="card-header">
+                Virtual Meetings
+            </div>
+            <div class="card-body">
+                <!-- Meeting List -->
+                <h5 class="card-title">Scheduled Meetings</h5>
+                <ul class="list-group" id="meetingList">
+                    <li class="list-group-item meeting-list-item">
+                        <div>
+                            <strong>Project Kickoff</strong><br>
+                            <small>Date: 2024-09-25 | Time: 10:00 AM</small><br>
+                            <small>Participants: John Doe, Jane Smith</small>
+                        </div>
+                        <button class="btn btn-success join-button" data-link="https://example.com/meeting/kickoff">Join</button>
+                    </li>
+                    <li class="list-group-item meeting-list-item">
+                        <div>
+                            <strong>Sprint Planning</strong><br>
+                            <small>Date: 2024-09-27 | Time: 2:00 PM</small><br>
+                            <small>Participants: John Doe, Jane Smith, Alex Johnson</small>
+                        </div>
+                        <button class="btn btn-success join-button" data-link="https://example.com/meeting/sprint">Join</button>
+                    </li>
+                </ul>
+                <button class="btn btn-custom mt-3" id="scheduleMeetingBtn">Schedule Meeting</button>
+
+                <!-- Schedule Meeting Form -->
+                <div class="meeting-form mt-4" id="meetingForm">
+                    <h5 class="card-title">Schedule a New Meeting</h5>
+                    <form id="newMeetingForm">
+                        <div class="form-group">
+                            <label for="meetingTitle">Meeting Title</label>
+                            <input type="text" class="form-control" id="meetingTitle" placeholder="Enter meeting title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingDate">Date</label>
+                            <input type="date" class="form-control" id="meetingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingTime">Time</label>
+                            <input type="time" class="form-control" id="meetingTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Participants</label>
+                            <input type="text" class="form-control" id="participants" placeholder="Enter participants" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingLink">Meeting Link</label>
+                            <input type="text" class="form-control" id="meetingLink" placeholder="https://example.com/meeting/xyz" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Schedule</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/Virtual.js"></script>
+</body>
+</html>
